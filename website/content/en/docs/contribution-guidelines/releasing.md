@@ -76,8 +76,8 @@ To perform a major or minor release, you must perform the following actions:
 ### Procedure
 
 1. **Before creating a new release branch**, it is imperative to perform the following initial setup steps:
-   1. In the [Branches and deploy contexts](https://app.netlify.com/sites/operator-sdk/settings/deploys#branches)
-   pane in Netlify, click into the Additional branches list section and add `v1.13.x`.
+   1. In the [Branches and deploy contexts](https://app.netlify.com/sites/operator-sdk/configuration/deploys#branches-and-deploy-contexts)
+   pane in Netlify, click into the Branch deploys list section and add `v1.3.x`. Then click Save to save and apply the new branch.
       - This will watch the branch when there are changes on Github (creating the branch, or adding a commit).
       - NOTE: You must be a [Netlify admin][doc-owners] in order to edit the branches list.
    1. Kick off a new build of the [ansible-operator-base
@@ -187,8 +187,8 @@ if you have admin access to the operator-sdk repo, or ask an administrator to do
 
 1. Post release steps
    1. Publish the new Netlify subdomain for version-specific docs. 
-      1. Assuming that the Netlify prestep was done before the new branch was created, a new [branch option](https://app.netlify.com/sites/operator-sdk/settings/domain#branch-subdomains)
-      should be visible to Netlify Admins under Domain management > Branch subdomains and can be mapped to a subdomain. (Note: you may have to scroll down to the bottom of the Branch subdomains section to find the branch that is ready to be mapped.)
+      1. Assuming that the Netlify prestep was done before the new branch was created, an [Add new branch subdomain](https://app.netlify.com/sites/operator-sdk/settings/domain#branch-subdomains) option should be visible to Netlify Admins under Domain management > Branch subdomains. 
+         1. Click on the `Add new branch subdomain` button, select the v1.3.x branch from the dropdown menu and click `Create subdomain`. (Note: you may have to scroll down to the bottom of the Branch subdomains section to find the button to add a new branch subdomain.)
       1. Please test that this subdomain works by going to the link in a browser. You can use the link in the second column to jump to the docs page for this release.
    1. Make an [operator-framework Google Group][of-ggroup] post.
       - You can use [this post](https://groups.google.com/g/operator-framework/c/2fBHHLQOKs8/m/VAd_zd_IAwAJ) as an example.
